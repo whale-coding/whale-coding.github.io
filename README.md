@@ -1,5 +1,8 @@
 ## Hi there 👋
 
+程序员 | 博客记录
+**联系我：**
+邮箱：jianqiangnie@163.com
 <!--
 **whale-coding/whale-coding** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
