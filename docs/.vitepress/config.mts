@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { sidebar, nav, head } from './configs'  //导入自定义的配置
+import { sidebar, nav} from './configs'  //导入自定义的配置
 import markdownItTaskList from "markdown-it-task-lists";
 import timeline from "vitepress-markdown-timeline";
 import container from "markdown-it-container";
@@ -13,11 +13,10 @@ export default defineConfig({
   lastUpdated: true, //最近更新时间
   cleanUrls: true, //VitePress 将从 URL 中删除尾随.html
   base: '/', //默认情况下，我们假设站点将部署在域的根路径 ( /) 中。 如果您使用 Github（或 GitLab）Pages 并部署到user.github.io/repo/，则将您的设置base为/repo/
-  // head: [
-  //   // 网站的图标（显示在浏览器的 tab 上）
-  //   ["link", {rel: "icon", href: `/favicon.ico`}],
-  // ],
-  head,
+  head: [
+    // 网站的图标（显示在浏览器的 tab 上）
+    ["link", {rel: "icon", href: `/favicon.ico`}],
+  ],
   /* markdown 配置 */
   markdown: {
     lineNumbers: true,  //代码块显示行号
