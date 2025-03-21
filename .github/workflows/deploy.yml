@@ -36,11 +36,11 @@ jobs:
               with:
                   # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
                   fetch-depth: 0
-              # 安装 npm
-            - name: Setup npm
-              uses: npm/action-setup@v2
-              with:
-                  version: 8
+#              # 安装 npm
+#            - name: Setup npm
+#              uses: npm/action-setup@v2
+#              with:
+#                  version: 8
               # 设置 node 版本
             - name: Setup Node
               uses: actions/setup-node@v4
@@ -53,12 +53,12 @@ jobs:
             - name: Install dependencies
               run: |
                   cd ./docs
-                  pnpm install --frozen-lockfile
+                  npm install --frozen-lockfile
               # 打包静态文件
             - name: Build
               run: |
                   echo ${{ github.workspace }} 
-                  pnpm run docs:deploy
+                  npm run docs:deploy
               env:
                   DOC_ENV: production
             #此操作有助于支持从任何静态站点生成器部署到 GitHub Pages
