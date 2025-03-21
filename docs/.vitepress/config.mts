@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { sidebar, nav } from './configs'  //导入自定义的配置
+import { sidebar, nav, head } from './configs'  //导入自定义的配置
 import markdownItTaskList from "markdown-it-task-lists";
 import timeline from "vitepress-markdown-timeline";
 import container from "markdown-it-container";
@@ -17,6 +17,7 @@ export default defineConfig({
   //   // 网站的图标（显示在浏览器的 tab 上）
   //   ["link", {rel: "icon", href: `/favicon.ico`}],
   // ],
+  head,
   /* markdown 配置 */
   markdown: {
     lineNumbers: true,  //代码块显示行号
