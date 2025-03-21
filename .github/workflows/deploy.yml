@@ -70,7 +70,7 @@ jobs:
               with:
                   # GitHub 密钥
                   token:
-                      ${{ secrets.PUSH_KEY }}
+                      ${{ secrets.GH_TOKEN }}
                       # GitHub Pages 读取的分支
                   branch: gh-pages
                   # 静态文件所在目录
