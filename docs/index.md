@@ -3,9 +3,9 @@ layout: home
 pageClass: m-home-layout
 
 hero:
-    name: '代码鲸'
-    text: '一个全面的个人知识库'
-    tagline: 一站式知识内容网站，包括学习路线、知识体系
+    name: '代码鲸的知识库'
+    text: '专注 & 洞察 & 分享'
+    tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容
     image:
         src: /logo.png
         alt: it's me
