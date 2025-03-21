@@ -75,7 +75,7 @@ export default defineConfig({
     //页脚
     footer: { 
       message: '所有文章版权皆归博主所有，仅供学习参考.',
-      copyright: 'Copyright © 2025-present whale-coding'
+      copyright: 'Copyright © 2025-present whale-coding | 皖ICP备2024052617号-1'
     },
   }
 })

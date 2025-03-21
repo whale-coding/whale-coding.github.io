@@ -1,6 +1,6 @@
 ---
 title: 关于我
-date: 2022-08-02 16:08:07
+date: 2025-03-21 16:08:07
 type: "about"
 ---
 
@@ -62,36 +62,32 @@ type: "about"
 ## 👲 基本信息
 
 ```yaml
-👤 Name: 伪音花火 / 01Petard
-🏠 Address: Zhejiang, Hangzhou
-📮 Email: 1520394133@qq.com
-🐱 Github: https://github.com/01Petard
-💻 Blog: https://01petard.github.io/blog-vue-vitepress/
-💻 Blog(Legacy): https://01petard.github.io/
-❤️ Hobbies: Bangumis, Doujin, Surfing Online, Digital Devices
+👤 Name: 代码鲸 / whale-coding
+🏠 Address: Anhui, Hefei
+📮 Email: njq3699@gmail.com
+🐱 Github: https://github.com/whale-coding
+💻 Blog: https://www.whalecoding.cn
+❤️ Hobbies: 写Bug、打游戏、逛技术博客、逛B站
 ```
 
-## ☁️ 博文词云(util 2024-11)
-
-<img src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/202412271807089.png" alt="image-20241227180740799" style="zoom:50%;" />
+## ☁️ 教育经历
+- 中原工学院          本科      计算机科学与技术        2019.9.1-2023.7.1
+- 安徽大学           硕士    人工智能        2023.9.1-2026.7.1
 
 ## 🔨 技术栈
 
 - 主干后端，接口仔、调包侠，最痛恨的就是自己不写注释还让别人写注释、规范化的人。
-- 0.25个前端，在AI的帮助下可以使用Vue3+ElementUI搭建简单页面并于后端交互。
-- 会使用Python写爬虫、脚本、部署模型；LLM模型玩家，看好端侧小模型。
-- 懂点板子相关的硬件知识，但对硬件开发不太了解，热衷于捣鼓软路由、NAS。
+- 0.25个前端，在AI的帮助下可以使用Vue+ElementUI搭建简单页面并于后端交互。
+- 会使用Python写爬虫、脚本、部署模型；LLM模型玩家，了解深度学习和机器学习。
 - ……
 
 ## 💘 关于本站
 
 采用 <a href="https://vitejs.cn/vitepress/">VitePress</a> 框架搭建。博客中的图片均由 <a href="https://github.com/Molunerfinn/PicGo">PicGo</a>
-管理，并上传至我的Github图床。本博客文章采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议，转载请注明出处。
+管理，并上传至阿里云OSS图床。本博客文章采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议，转载请注明出处。
 
 ## 🙋 免责声明
 
 本站以分享经验、知识还有我的个人爱好为为目的，所有文章所涉及使用的工具、资源均源自互联网，本人不对因浏览网站内容而产生的实际问题负责。
 本网站仅进行搬运和分享以供学习和研究使用，版权归作者所有，如果无意之中侵犯了您的版权，请右下角私信与我取得联系，我将在第一时间删除！另外， 本站内的文章仅供学习交流之用，不参与商业用途。
-
-**Last Update：2025-03-10**
 

@@ -1,7 +1,7 @@
 ///docs/.vitepress/configs/nav.ts
 // 导航栏
 import type { DefaultTheme } from 'vitepress'
-// , link: '/interview/index'
+
 export const nav: DefaultTheme.Config['nav'] = [
     { text: '首页', link: '/' },
     { 

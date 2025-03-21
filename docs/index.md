@@ -3,31 +3,50 @@ layout: home
 pageClass: m-home-layout
 
 hero:
-    name: '前端工具'
-    text: '一个有趣的前端趣味工具仓库'
-    tagline: 日常开发所用到的日常提效工具，持续开发中...
+    name: '代码鲸'
+    text: '一个全面的个人知识库'
+    tagline: 一站式知识内容网站，包括学习路线、知识体系
     image:
         src: /logo.png
-        alt: 工具包
+        alt: it's me
     actions:
         - theme: brand
           text: 开始
-          link: /webrtc/index
+          link: /guide/guide_java/
+        - theme: brand
+          text: 知识归档
+          link: /archive
+        - theme: alt
+          text: 关于我
+          link: /about
         - theme: alt
           text: GitHub
-          link: https://github.com/lyxdream/tool-kit
+          link: https://github.com/whale-coding
 
 features:
     - icon: 📖
-      title: webRTC
-      details: 纯前端实现录屏、拍照<br />音视频通话<br/>虚拟背景，信令服务器
-      link: https://lyxdream.github.io/tool-kit/webrtc/index
-      linkText: 常用趣味工具
+      title: 学习笔记
+      details: 个人学习笔记<br />后端、算法
+      link: /guide/guide_java/
+      linkText: 学习笔记
 
-    - icon: 🧰
-      title: vscode插件
-      details: vscode录屏插件<br />在vscode安装插件即可实现屏幕录制并下载
-      link: https://lyxdream.github.io/tool-kit/vscode-plugin/index
-      linkText: 录屏插件
+    - icon: 📝
+      title: 面试宝典
+      details: 归纳经典的后端面试题。
+      link: /interview/interview_list/
+      linkText: 面试宝典
+    
+    - icon: 📘
+      title: 实践经验
+      details: 日常开发的经验及其踩过的坑
+      link: /practical_experience/
+      linkText: 实践经验
+
+    - icon: 🍉
+      title: 预测未来的最好方法，就是创造未来。
+      details: 
+      link: 
+      linkText: 
 ---
+
 
