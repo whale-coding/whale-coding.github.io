@@ -59,5 +59,17 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 },
             ]
         }
-    ]
+    ],
+    '/scientific_research/': [
+        {
+            text: '科研记录',
+            collapsed: false,
+            items: [
+                {
+                    text: '文献阅读列表',
+                    link: '/需要阅读的文献汇总'
+                }
+            ]
+        }
+    ],
 }
