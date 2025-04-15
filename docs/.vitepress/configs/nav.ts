@@ -32,6 +32,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     },
     { text: '实践经验', link: '/practical_experience/index' },
     { text: '知识归档', link: '/archive/index' },
+    { text: '科研记录', link: '/scientific_research/index' },
     {text: '人生杂谈', link: '/talklife/index'},
     {text: '关于我', link: '/about'},
 ]
