@@ -67,7 +67,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             items: [
                 {
                     text: '文献阅读列表',
-                    link: '/需要阅读的文献汇总'
+                    link: '/scientific_research/需要阅读的文献汇总'
                 }
             ]
         }
