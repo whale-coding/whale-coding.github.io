@@ -5,11 +5,11 @@ import type { DefaultTheme } from 'vitepress'
 export const sidebar: DefaultTheme.Config['sidebar'] = {
     '/guide/': [
         {
-            text: '个人学习笔记',
+            // text: '个人学习笔记',
             collapsed: false,
             items: [
                 {
-                    text: 'index11111',
+                    text: '笔记1',
                     link: '/webrtc/index'
                 }
             ]
@@ -17,7 +17,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     ],
     '/interview/': [
         {
-            text: '面试宝典',
+            // text: '面试宝典',
             items: [
                 { text: '面试题', link: '/vscode-plugin/index' },  // 单个
                 // 嵌套
@@ -66,10 +66,20 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
                 {
-                    text: '文献阅读列表',
+                    text: '1.文献阅读列表',
                     link: '/scientific_research/需要阅读的文献汇总'
                 }
             ]
-        }
+        },
+        {
+            text: '实验记录',
+            collapsed: false,
+            items: [
+                {
+                    text: '1.文献阅读列表',
+                    link: '/scientific_research/需要阅读的文献汇总'
+                }
+            ]
+        },
     ],
 }

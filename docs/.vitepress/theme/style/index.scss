@@ -1,4 +1,7 @@
 
 //.vitepress/theme/style/index.scss
-@import './rainbow.scss';
-@import './vars.scss';
+// @import './rainbow.scss';
+// @import './vars.scss';
+
+@use './rainbow.scss';
+@use './vars.scss';
