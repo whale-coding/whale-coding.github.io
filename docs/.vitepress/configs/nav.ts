@@ -27,12 +27,11 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
             {text: '后端开发', link: '/hodgepodge/backend/index'},
             {text: '前端开发', link: '/hodgepodge/frontend/index'},
-            {text: '网站运维', link: '/hodgepodge/operations/index'},
         ] 
     },
-    { text: '实践经验', link: '/practical_experience/index' },
+    { text: '实践经验', link: '/experience/index' },
     { text: '知识归档', link: '/archive/index' },
-    { text: '科研记录', link: '/scientific_research/index' },
+    { text: '科研记录', link: '/research/index' },
     {text: '人生杂谈', link: '/talklife/index'},
     {text: '关于我', link: '/about'},
 ]
