@@ -18,6 +18,8 @@ https://developer.aliyun.com/article/1614920
 
 https://vitepress-theme-async.imalun.com/guide/config
 
+https://xuxing409.github.io/my-blog/technology/article/building-blog-with-vitepress.html
+
 ## 2、大佬博客参考
 
 代码港湾：https://01petard.github.io/blog-vue-vitepress/
@@ -31,6 +33,8 @@ SJDocs:https://issunjian.github.io/docs/
 正心全栈编程：https://notes.zhengxinonly.com/
 
 查尔斯的知识库：https://blog.charles7c.top/
+
+是柠新呀的知识库： https://xuxing409.github.io/my-blog/
 
 ## 3、安装和搭建 vitepress
 
