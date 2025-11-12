@@ -26,15 +26,11 @@ jobs:
     # Build job
     build:
         runs-on: ubuntu-latest
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
         steps:
             # 拉取代码
             - name: Checkout
               uses: actions/checkout@v4
               with:
-                  # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
                   fetch-depth: 0
               # 安装 pnpm
             - name: Setup pnpm
@@ -54,9 +50,7 @@ jobs:
               run: pnpm install --frozen-lockfile
               # 打包静态文件
             - name: Build with VitePress
-              run: |
-                  echo ${{ github.workspace }} 
-                  npx vitepress build docs
+              run: pnpm vitepress build docs
               env:
                   DOC_ENV: production
             #此操作有助于支持从任何静态站点生成器部署到 GitHub Pages
@@ -64,16 +58,16 @@ jobs:
               uses: actions/upload-pages-artifact@v3
               with:
                   path: ./docs/.vitepress/dist
-              # 发布
-            - name: Deploy
-              uses: JamesIves/github-pages-deploy-action@v4.3.4
-              with:
-                  # GitHub 密钥
-                  token:
-                      ${{ secrets.ACCESS_TOKEN }}
-                      # GitHub Pages 读取的分支
-                  branch: gh-pages
-                  # 静态文件所在目录
-                  folder: ./docs/.vitepress/dist
+    # 官方部署作业（必须单独 job）
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/github-script@v4
 
 
