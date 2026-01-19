@@ -1,5 +1,5 @@
 # .github/workflows/deploy.yml
-name: Deploy VitePress site to Pages
+name: Deploy VitePress site to GitHub Pages
 
 on:
     # 每当 push 到 main 分支时触发部署

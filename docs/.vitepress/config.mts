@@ -1,10 +1,13 @@
+// config.mts vitpress的配置文件
+
+// 默认的vitepress 配置文件
 import { defineConfig } from 'vitepress'
 
-// 引入时间线插件
-import timeline from "vitepress-markdown-timeline"
-
 // 主题配置导入
-import {blogThemeConfig} from './blog-theme'
+import {teekThemeConfig} from './teekConfig.ts'
+
+// 导入Nav模块
+import { Nav } from "./ConfigHyde/Nav"; 
 
 const description = [
   "欢迎来到 vitepress-theme-teek 使用文档",
@@ -16,9 +19,8 @@ const description = [
 // VitePress 配置
 export default defineConfig({
   // 配置中通过 extends 可以将主题配置合并到 VitePress 配置里
-  // 继承博客主题配置
-  extends: blogThemeConfig,  // 使用 extends 合并主题配置
-
+  // 继承teek主题配置
+  extends: teekThemeConfig,  // 使用 extends 合并主题配置
 
   /*全站配置*/
   title: "鲸码小栈",
@@ -32,23 +34,22 @@ export default defineConfig({
   markdown: {
     // 开启行号
     lineNumbers: true,
-    config: (md) => {
-      md.use(timeline)
-    },
     image: {
       // 默认禁用；设置为 true 可为所有图片启用懒加载。
       lazyLoading: true,
     },
     // 更改容器默认值标题
     container: {
-      tipLabel: "提示",
+      infoLabel: "信息",
+      noteLabel: "笔记",
+      tipLabel:  "提示",
       warningLabel: "警告",
       dangerLabel: "危险",
-      infoLabel: "信息",
       detailsLabel: "详细信息",
+      importantLabel: "重要",
+      cautionLabel: "注意",
     },
   },
-
 
   /*Vite主题配置*/
   themeConfig: {
@@ -59,61 +60,10 @@ export default defineConfig({
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
     lastUpdatedText: "上次更新时间",
-    // 导航栏配置    
-    nav: [
-      { text: '🏡首页', link: '/' },
-      { 
-        text: '📚博客',
-        items: [
-            {text: 'Java', link: '/blog_Java',},
-            {text: '前端', link: '/blog_web', },
-            {text: 'Goland', link: '/blog_goland',},
-            {text: '算法', link: '/blog_algorithm',},
-            {text: '运维', link: '/blog_ops', },
-        ] 
-      },
-      { 
-        text: '🛠️知识库',
-        items: [
-            {text: 'Java', link: '/repository_java', },
-            {text: '前端', link: '/repository_web', },
-            {text: 'Goland', link: '/repository_goland',},
-            {text: '运维', link: '/repository_ops', },
-        ]
-      },
-      { 
-        text: '🍋算法',
-        items: [
-            {text: '算法基础', link: '/algorithm_base', },
-            {text: 'Leetcode100', link: '/algorithm_hot100', },
-            {text: '算法题库', link: '/algorithm_store', },
-        ]
-      },
-      { 
-        text: '🏅八股',
-        items: [
-            {text: 'Java', link: '/interview_java', },
-            {text: 'Goland', link: '/interview_goland',},
-        ]
-     },
-    //  { 
-    //     text: '🏓生活随笔',
-    //     items: [
-    //         {text: '每周复盘', link: '/talklife_write', },
-    //         {text: '人生杂谈', link: '/talklife_insight', },
-    //     ]
-    //   },
-     {
-        text: "🎨归档",
-        items: [
-          { text: "归档页", link: "/archives" },
-          { text: "分类页", link: "/categories" },
-          { text: "标签页", link: "/tags" },
-        ]
-     },
-      { text: "✨ 关于", link: "/personal" },
-    ],
 
+    /* 导航栏配置 */    
+    nav: Nav,
+   
     /* 右侧大纲配置 */    
     outline: {
       level: [2, 4],  // 'deep'
