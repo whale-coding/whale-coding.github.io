@@ -3,19 +3,17 @@
 export const Nav = [
     { text: '🏡首页', link: '/' },
     { 
-        text: '📚后端开发',
+        text: '📚知识库',
         items: [
-            {text: 'Java', link: '/blog_Java',},
-            {text: 'Goland', link: '/blog_goland',},
-            {text: '运维', link: '/blog_ops', },
-            {text: '前端', link: '/blog_web', },
+            {text: 'Java', link: '/Java',},
+            {text: 'Goland', link: '/goland',},
+            {text: '运维', link: '/ops', },
+            {text: '前端', link: '/web', },
         ] 
     },
     { 
-        text: '🛠️AI',
+        text: '🤖AI',
         items: [
-            {text: 'Java', link: '/repository_java', },
-            {text: '前端', link: '/repository_web', },
             {text: 'Goland', link: '/repository_goland',},
             {text: '运维', link: '/repository_ops', },
         ]
@@ -24,7 +22,7 @@ export const Nav = [
         text: '🍋算法',
         items: [
             {text: '算法基础', link: '/algorithm_base', },
-            {text: 'Leetcode100', link: '/algorithm_hot100', },
+            {text: 'Leetcode', link: '/algorithm_leetcode', },
             {text: '算法题库', link: '/algorithm_store', },
         ]
     },
@@ -33,23 +31,31 @@ export const Nav = [
         items: [
             {text: 'Java', link: '/interview_java', },
             {text: 'Goland', link: '/interview_goland',},
+            {text: 'AI', link: '/interview_ai',},
         ]
     },
     { 
-        text: '🏓项目实战',
+        text: '🏓项目',
         items: [
-            {text: '随想听书', link: '/talklife_write', },
-            {text: '人生杂谈', link: '/talklife_insight', },
+            {text: '随想听书', link: '/work_tingshu', },
         ]
     },
-    {
-        text: "🎨归档",
+    { 
+        text: '🎨随笔',
         items: [
-          { text: "归档页", link: "/archives" },
-          { text: "分类页", link: "/categories" },
-          { text: "标签页", link: "/tags" },
+            {text: '人生杂谈', link: '/talklife', },
+            {text: '个人复盘', link: '/review', },
         ]
     },
+    // {
+    //     text: "🎨归档",
+    //     items: [
+    //       { text: "归档页", link: "/archives" },
+    //       { text: "分类页", link: "/categories" },
+    //       { text: "标签页", link: "/tags" },
+    //     ]
+    // },
     { text: "✨ 关于", link: "/personal" },
 
   ]
+  

@@ -5,9 +5,8 @@ sidebar: false
 article: false
 outline: false
 articleBanner: false
-permalink: /pages/7a4723
+permalink: personal
 categories:
-  - 
 ---
 
 ## 👲 基本信息
