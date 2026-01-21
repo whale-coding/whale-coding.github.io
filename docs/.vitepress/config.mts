@@ -22,7 +22,7 @@ export default defineConfig({
   // 继承teek主题配置
   extends: teekThemeConfig,  // 使用 extends 合并主题配置
 
-  base: "./",
+  // base: "./",
   /*全站配置*/
   title: "鲸码小栈",
   description: description,
