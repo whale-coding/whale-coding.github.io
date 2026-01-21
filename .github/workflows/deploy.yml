@@ -57,14 +57,8 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: ./docs/.vitepress/dist
-            # - name: 🚀 部署到 GitHub Pages
-            #   uses: peaceiris/actions-gh-pages@v3 # 如果你是推送到其他仓库请修改！
-            #   with:
-            #     github_token: ${{ secrets.GITHUB_TOKEN }}
-            #     publish_dir: .vuepress/dist # 注意检查位置是否正确
-            #     commit_message: 'Deploy to GitHub Pages'
-            #     publish_branch: gh-pages  # 可选，默认就是 gh-pages，可以省略
+                  path: /docs/.vitepress/dist
+
     # # 官方部署作业（必须单独 job）
     deploy:
         needs: build
@@ -76,8 +70,6 @@ jobs:
         - name: Deploy to GitHub Pages
           id: deployment
           uses: actions/deploy-pages@v4
-          with:
-            path: ./docs/.vitepress/dist
         
 
 
