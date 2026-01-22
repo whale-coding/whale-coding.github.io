@@ -14,8 +14,9 @@ export const Nav = [
     { 
         text: '🤖AI',
         items: [
-            {text: 'Goland', link: '/repository_goland',},
-            {text: '运维', link: '/repository_ops', },
+            {text: 'AI基础', link: '/ai_base',},
+            {text: 'AI应用', link: '/ai_application', },
+            {text: '大模型应用开发', link: '/ai_dev',},
         ]
     },
     { 
@@ -23,7 +24,6 @@ export const Nav = [
         items: [
             {text: '算法基础', link: '/algorithm_base', },
             {text: 'Leetcode', link: '/algorithm_leetcode', },
-            {text: '算法题库', link: '/algorithm_store', },
         ]
     },
     { 
@@ -56,6 +56,4 @@ export const Nav = [
     //     ]
     // },
     { text: "✨ 关于", link: "/personal" },
-
   ]
-  

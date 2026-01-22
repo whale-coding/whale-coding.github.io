@@ -1,0 +1,21 @@
+/* 自定义vp主题 */
+
+:root {
+  /* 1. 增加整体布局的最大宽度 */
+  /* 调大这个值可以让侧边栏和右侧目录栏往两边扩展 */
+  /* 如果你的屏幕很大，觉得还不够宽，可以改为 1800px 甚至 100% */
+  --vp-layout-max-width: 1500px !important;
+}
+
+
+/* 2. 让文档容器尽可能占满宽度 */
+.VPDoc .container {
+  max-width: 100% !important;
+}
+
+/* 3. 调整正文内容的最大宽度 */
+.VPDoc .content-container {
+  /* 默认可能只有 688px 或 768px，这里调大到 1100px */
+  /* 如果希望正文内容彻底铺满中间区域，可以改为 100% */
+  max-width: 100% !important; 
+}
