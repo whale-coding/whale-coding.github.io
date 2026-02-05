@@ -1,0 +1,25 @@
+/* 自定义vp主题 */
+
+
+/* 强调蓝色，使用方法：<span class="highlighted">进程管理</span> */
+.highlighted {
+  color: #2563eb;     /* 苹果风蓝 */
+  font-weight: 600;   /* 比粗体更柔和 */
+  letter-spacing: 0.01em;
+}
+
+/* 正文段落 + 列表：字号与行距统一 */
+.VPDoc p,
+.VPDoc li {
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+
+/* note / tip / warning：内容字体跟正文一致（更稳：直接指定） */
+.VPDoc .custom-block,
+.VPDoc .custom-block p,
+.VPDoc .custom-block li {
+  font-size: 17px !important;
+  line-height: 1.85 !important;
+}

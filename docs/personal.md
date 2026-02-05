@@ -6,6 +6,8 @@ article: false
 outline: false
 ---
 
+<div class="about-page">
+
 ## 👲 基本信息
 
 ```yaml
@@ -27,3 +29,13 @@ outline: false
 - 主干后端，接口仔、调包侠，最痛恨的就是自己不写注释还让别人写注释、规范化的人。
 - 0.25个前端，在AI的帮助下可以使用Vue+ElementUI搭建简单页面并于后端交互。
 - ...
+
+</div>
+
+
+<style scoped>
+h1 {
+  text-align: center;
+}
+
+</style>

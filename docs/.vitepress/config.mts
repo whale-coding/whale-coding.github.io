@@ -17,9 +17,9 @@ export default defineConfig({
   extends: teekConfig,
 
   // 全站配置
-  title: "vitepress-theme-teek",
+  title: "鲸码小栈",
   description: description,
-  cleanUrls: false,
+  cleanUrls: true,
   lastUpdated: true,
   lang: "zh-CN",
   head: [
@@ -37,14 +37,6 @@ export default defineConfig({
     ["meta", { property: "og:description", description }],
     ["meta", { name: "description", description }],
     ["meta", { name: "author", content: "Teek" }],
-    // 禁止浏览器缩放
-    // [
-    //   "meta",
-    //   {
-    //     name: "viewport",
-    //     content: "width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no",
-    //   },
-    // ],
     ["meta", { name: "keywords", description }],
   ],
   // markdown 配置
@@ -57,12 +49,6 @@ export default defineConfig({
     },
     // 更改容器默认值标题
     container: {
-      // tipLabel: "提示",
-      // warningLabel: "警告",
-      // dangerLabel: "危险",
-      // infoLabel: "信息",
-      // detailsLabel: "详细信息",
-
       infoLabel: "信息",
       noteLabel: "笔记",
       tipLabel:  "提示",
@@ -75,7 +61,7 @@ export default defineConfig({
   },
   // sitemap 配置
   sitemap: {
-    hostname: "https://vp.teek.top", // ** 换成你的域名
+    hostname: "https://www.whalecoding.cn/", // 换成你的域名
     transformItems: (items) => {
       const permalinkItemBak: typeof items = [];
       // 使用永久链接生成 sitemap
@@ -92,7 +78,8 @@ export default defineConfig({
   // 主题配置
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "/teek-logo-mini.svg",
+    // logo: "/teek-logo-mini.svg",
+    logo: "/logo.webp",
     darkModeSwitchLabel: "主题",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
@@ -149,7 +136,7 @@ export default defineConfig({
     editLink: {
       text: "在 GitHub 上编辑此页",
       pattern:
-        "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/:path",
+        "https://github.com/whale-coding/whale-coding.github.io/edit/main/docs/:path",
     },
     // 页脚配置
     footer: { 
