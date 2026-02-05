@@ -1,12 +1,9 @@
 ---
 title: 关于我
-date: 2025-08-07 07:53:30
+date: 2025-08-06 23:53:30
 sidebar: false
 article: false
 outline: false
-articleBanner: false
-permalink: personal
-categories:
 ---
 
 ## 👲 基本信息

@@ -1,13 +1,8 @@
 // config.mts vitpress的配置文件
-
-// 默认的vitepress 配置文件
-import { defineConfig } from 'vitepress'
-
-// 主题配置导入
-import {teekThemeConfig} from './teekConfig.ts'
-
-// 导入Nav模块
-import { Nav } from "./ConfigHyde/Nav"; 
+import { defineConfig } from "vitepress";  // 默认的vitepress 配置文件
+// import llmstxt from "vitepress-plugin-llms";
+import { teekConfig } from "./teekConfig";  // 主题配置导入
+import { Nav } from "./Nav";   // 导入Nav模块
 
 const description = [
   "欢迎来到 vitepress-theme-teek 使用文档",
@@ -18,19 +13,41 @@ const description = [
 // https://vitepress.dev/reference/site-config
 // VitePress 配置
 export default defineConfig({
-  // 配置中通过 extends 可以将主题配置合并到 VitePress 配置里
-  // 继承teek主题配置
-  extends: teekThemeConfig,  // 使用 extends 合并主题配置
+   // 配置中通过 extends 可以将主题配置合并到 VitePress 配置里
+  extends: teekConfig,
 
-  /*全站配置*/
-  title: "鲸码小栈",
+  // 全站配置
+  title: "vitepress-theme-teek",
   description: description,
   cleanUrls: false,
   lastUpdated: true,
   lang: "zh-CN",
   head: [
-
+    [
+      "link",
+      { rel: "icon", type: "image/svg+xml", href: "/teek-logo-mini.svg" },
+    ],
+    ["link", { rel: "icon", type: "image/png", href: "/teek-logo-mini.png" }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:locale", content: "zh-CN" }],
+    ["meta", { property: "og:title", content: "Teek | VitePress Theme" }],
+    ["meta", { property: "og:site_name", content: "Teek" }],
+    ["meta", { property: "og:image", content: "" }],
+    ["meta", { property: "og:url", content: "" }],
+    ["meta", { property: "og:description", description }],
+    ["meta", { name: "description", description }],
+    ["meta", { name: "author", content: "Teek" }],
+    // 禁止浏览器缩放
+    // [
+    //   "meta",
+    //   {
+    //     name: "viewport",
+    //     content: "width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no",
+    //   },
+    // ],
+    ["meta", { name: "keywords", description }],
   ],
+  // markdown 配置
   markdown: {
     // 开启行号
     lineNumbers: true,
@@ -40,6 +57,12 @@ export default defineConfig({
     },
     // 更改容器默认值标题
     container: {
+      // tipLabel: "提示",
+      // warningLabel: "警告",
+      // dangerLabel: "危险",
+      // infoLabel: "信息",
+      // detailsLabel: "详细信息",
+
       infoLabel: "信息",
       noteLabel: "笔记",
       tipLabel:  "提示",
@@ -50,42 +73,88 @@ export default defineConfig({
       cautionLabel: "注意",
     },
   },
-
-  /*Vite主题配置*/
+  // sitemap 配置
+  sitemap: {
+    hostname: "https://vp.teek.top", // ** 换成你的域名
+    transformItems: (items) => {
+      const permalinkItemBak: typeof items = [];
+      // 使用永久链接生成 sitemap
+      const permalinks = (globalThis as any).VITEPRESS_CONFIG.site.themeConfig
+        .permalinks;
+      items.forEach((item) => {
+        const permalink = permalinks?.map[item.url];
+        if (permalink)
+          permalinkItemBak.push({ url: permalink, lastmod: item.lastmod });
+      });
+      return [...items, ...permalinkItemBak];
+    },
+  },
+  // 主题配置
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-
-    logo: '/logo.webp', //显示在导航栏中网站标题之前的徽标文件。接受路径字符串或对象来为亮/暗模式设置不同的徽标。
+    logo: "/teek-logo-mini.svg",
     darkModeSwitchLabel: "主题",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
     lastUpdatedText: "上次更新时间",
-
-    /* 导航栏配置 */    
-    nav: Nav,
-   
-    /* 右侧大纲配置 */    
+    // 右侧大纲配置
     outline: {
-      level: [2, 4],  // 'deep'
-      label: '目录导航'
+      level: [2, 4],
+      label: "本页导航",
     },
-    /* 文档页脚 */
+    // 文档页脚配置
     docFooter: {
-      prev: '上一篇',
-      next: '下一篇'
+      prev: "上一页",
+      next: "下一页",
     },
-    /* 社交账号链接 */
+    // 导航栏配置
+    nav: Nav,
+    // nav: [
+    //   { text: "首页", link: "/" },
+    //   {
+    //     text: "指南",
+    //     link: "/guide/intro",
+    //     activeMatch: "/01.指南/",
+    //   },
+    //   { text: "配置", link: "/reference/config", activeMatch: "/10.配置/" },
+    //   { text: "开发", link: "/develop/intro", activeMatch: "/15.主题开发/" },
+    //   {
+    //     text: "功能页",
+    //     items: [
+    //       { text: "归档页", link: "/archives" },
+    //       { text: "清单页", link: "/articleOverview" },
+    //       { text: "登录页", link: "/login" },
+    //       {
+    //         text: "风险链接提示页",
+    //         link: "/risk-link?target=https://vp.teek.top",
+    //       },
+    //       { text: "分类页", link: "/categories" },
+    //       { text: "标签页", link: "/tags" },
+    //     ],
+    //   },
+    //   { text: "✨ 关于我", link: "/personal/" },
+    // ],
+    // 社交账号配置
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/whale-coding' }
+      {
+        icon: "github",
+        link: "https://github.com/whale-coding",
+      },
     ],
-    /* 搜索配置 */
+    // 搜索配置
     search: {
-      provider: 'local'
+      provider: "local",
     },
-    /* 页脚配置 */
+    // 编辑此页配置
+    editLink: {
+      text: "在 GitHub 上编辑此页",
+      pattern:
+        "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/:path",
+    },
+    // 页脚配置
     footer: { 
       // message: '所有文章版权皆归博主所有，仅供学习参考.',
       // copyright: 'Copyright © 2025-present whale-coding | 皖ICP备2024052617号-1'
     },
-  }
-})
+  },
+});

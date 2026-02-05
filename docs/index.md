@@ -1,40 +1,33 @@
 ---
 layout: home
 
-title: VitePress
-titleTemplate: 快速上手中文教程
-
 hero:
-  name: 鲸码小栈
-  text: "个人知识库"
-  tagline: 如果你也想搭建它，那跟我一起做吧
-  image:
-    src: /logo.webp
-    alt: VitePress
+  name: Teek
+  text: VitePress 主题
+  tagline: ✨一个轻量、简洁高效、灵活配置，易于扩展的 VitePress 主题
   actions:
     - theme: brand
       text: 开始
-      link: /getting-started
+      link: /guide/quickstart
     - theme: alt
-      text: GitHub
-      link: https://github.com/Yiov/vitepress-doc
-    - theme: sponsor
-      text: 搭建导航
-      link: /nav/
+      text: 配置
+      link: /reference/config
+  image:
+    src: /teek-logo-large.png
+    alt: Teek
 
 features:
+  - icon: 📖
+    title: 结构化 && 体系化
+    details: 自动生成侧边栏、目录页、索引页、面包屑等，轻松构建一个结构化知识库。
+  - icon: 🎉
+    title: 碎片化 & 个性化
+    details: 提供快速构建知识的碎片化形态，并提供大量个性化的主题配置。
+  - icon: 🎇
+    title: 文档风 & 博客风
+    details: 支持通过配置搭配出各种风格，支持个人博客、文档站、知识库等场景。
   - icon: 📝
-    title: 专注于您的内容
-    details: 只需使用 Markdown 即可轻松创建精美的文档网站
-  - icon: 🦸🏻‍♀️
-    title: 享受Vite DX
-    details: 即时服务器启动，闪电般快速的热更新，并利用 Vite 生态插件。
-    link: https://vitejs.cn/
-    linkText: Vite
-  - icon: 🚀
-    title: 快速发布网站
-    details: 使用静态 HTML 进行快速初始加载，使用客户端路由进行快速加载后导航
+    title: 专注内容
+    details: 只需 Markdown 即可轻松创建美观的文档站点，配合多维索引快速定位每个知识点。
 ---
-
-
 
