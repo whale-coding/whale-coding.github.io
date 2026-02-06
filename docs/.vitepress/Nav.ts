@@ -25,7 +25,7 @@ export const Nav = [
     },
 
     // { text: "配置", link: "/reference/config", activeMatch: "/10.配置/" },
-    { text: "🐲算法", link: "/algorithm/intro", activeMatch: "/30.算法/" },
+    { text: "🐲算法", link: "/algorithm/guide", activeMatch: "/30.算法/" },
     { text: "💻开发", link: "/develop/git_use", activeMatch: "/40.开发/" },
     // {
     //     text: "功能页",
