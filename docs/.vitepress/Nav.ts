@@ -3,23 +3,30 @@
 export const Nav = [
     { text: "🏡首页", link: "/" },
     { 
-        text: '📚知识库',
+        text: '📚Java',
         items: [
-            {text: 'Java', link: '/guide/java', activeMatch: "/10.知识库-Java/" },
-            {text: 'Goland', link: '/guide/goland', activeMatch: "/11.知识库-Goland/" },
-            {text: '运维', link: '/guide/ops', activeMatch: "/12.知识库-运维/" },
-            {text: '前端', link: '/guide/frontend', activeMatch: "/13.知识库-前端/" },
+            {text: '知识库', link: '/java/guide', activeMatch: "/10.Java-知识库/" },
+            {text: '八股文', link: '/java/interview', activeMatch: "/11.Java-八股/"  },
+        ]
+    },
+    { 
+        text: '🏅Goland',
+        items: [
+            {text: '知识库', link: '/goland/guide', activeMatch: "/15.Goland-知识库/" },
+            {text: '八股文', link: '/goland/interview', activeMatch: "/16.Goland-八股/"  },
         ]
     },
     { 
         text: '🤖AI',
-        link: "/ai/quickstart",
-        activeMatch: "/20.AI/",
+        items: [
+            {text: '知识库', link: '/ai/guide', activeMatch: "/20.AI-知识库/" },
+            {text: '八股文', link: '/ai/interview', activeMatch: "/21.AI-八股/"  },
+        ]
     },
 
     // { text: "配置", link: "/reference/config", activeMatch: "/10.配置/" },
-    { text: "💻开发", link: "/develop/intro", activeMatch: "/30.开发/" },
-    { text: "🐲算法", link: "/algorithm/intro", activeMatch: "/40.算法/" },
+    { text: "🐲算法", link: "/algorithm/intro", activeMatch: "/30.算法/" },
+    { text: "💻开发", link: "/develop/git_use", activeMatch: "/40.开发/" },
     // {
     //     text: "功能页",
     //     items: [
@@ -31,19 +38,11 @@ export const Nav = [
     //     ],
     // },
     { 
-        text: '🏅八股',
-        items: [
-            {text: 'Java八股', link: '/interview/java', activeMatch: "/50.八股-Java/" },
-            {text: 'Goland八股', link: '/interview/goland', activeMatch: "/51.八股-Goland/" },
-            {text: 'AI八股', link: '/interview/ai', activeMatch: "/52.八股-AI/" },
-        ]
-    },
-    { 
         text: '🎨随笔',
         items: [
-            {text: '人生杂谈', link: '/life/talklife', activeMatch: "/60.随笔-人生杂谈/" },
-            {text: '个人复盘', link: '/life/review', activeMatch: "/60.随笔-个人复盘/"  },
+            {text: '人生杂谈', link: '/life/talklife', activeMatch: "/50.随笔-人生杂谈/" },
+            {text: '个人复盘', link: '/life/review', activeMatch: "/50.随笔-个人复盘/"  },
         ]
     },
-    { text: "✨ 关于我", link: "/personal/" },
+    // { text: "✨ 关于我", link: "/personal/" },
 ]
