@@ -6,7 +6,22 @@ article: false
 outline: false
 ---
 
+
 <div class="about-page">
+
+## 🏡个人主页
+::: shareCard
+
+```yaml
+- name: Whale Coding
+  desc: 让我给你讲讲我的故事吧
+  avatar: https://gcore.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg
+  link: /personal/index.html
+  bgColor: "#FFB6C1"
+  textColor: "#621529"
+```
+
+:::
 
 ## 👲 基本信息
 

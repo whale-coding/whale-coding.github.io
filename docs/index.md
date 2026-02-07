@@ -14,7 +14,7 @@ hero:
       link: /interview/goland
     - theme: alt
       text: 关于我
-      link: /personal
+      link: /personal/
 
 
 features:
