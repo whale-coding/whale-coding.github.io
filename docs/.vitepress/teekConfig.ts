@@ -7,9 +7,10 @@ export const teekConfig = defineTeekConfig({
   vpHome: true, // 是否隐藏 VP 首页
   sidebarTrigger: true, // 是否开启侧边栏折叠功能
   author: { name: "鲸码小栈", link: "https://github.com/whale-coding" },   // 文章默认的作者信息
+  
   // 主题增强配置，当开启后，右上角将有主题增强面板出现。
   themeEnhance: {
-    enabled: true, // 启用主题增强功能
+    enabled: false, // 启用主题增强功能
     // 布局切换配置
     layoutSwitch: {
       disabled: false, // 禁用布局切换
@@ -37,6 +38,7 @@ export const teekConfig = defineTeekConfig({
       defaultValue: true, // 聚光灯默认开关状态
     },
   },
+
   // 页脚信息配置
   footerInfo: {
     // 页脚信息，支持 HTML 格式（位于主题版权上方）

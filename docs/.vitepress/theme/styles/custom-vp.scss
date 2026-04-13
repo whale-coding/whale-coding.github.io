@@ -23,3 +23,55 @@
   font-size: 17px !important;
   line-height: 1.85 !important;
 }
+
+
+// blockquote：自定义样式
+// .vp-doc blockquote {
+//   border-left: none;
+//   background: none;
+//   padding: 0;
+// }
+
+/* 覆盖 VitePress 默认的 blockquote 样式 */
+.vp-doc blockquote {
+  margin: 1rem 0;
+  // padding: 16px 20px;
+  background-color: #fff4f4; /* 浅粉色背景 */
+  border-left: 4px solid #ff6b6b; /* 左侧红色粗边框 */
+  border-radius: 8px; /* 整体圆角 */
+  color: #333; /* 正文文字颜色 */
+  font-weight: 600; /* 文字加粗 */
+  /* 如果之前的代码还在，确保去掉默认边框和无背景的设置 */
+}
+
+
+// 自定义主题颜色
+:root {
+  --vp-layout-max-width: 1800px !important;
+
+  /* Element Plus 红色 (ep-red) - 浅色模式 */
+  --vp-c-brand-1: #f56c6c;      /* 主色调 */
+  --vp-c-brand-2: #f89898;      /* 悬浮/较浅的红色 */
+  --vp-c-brand-3: #c45656;      /* 点击/较深的红色 */
+  --vp-c-brand-next: #fab6b6;   /* 渐变过渡色 */
+}
+.dark {
+  /* Element Plus 红色 (ep-red) - 暗色模式 */
+  --vp-c-brand-1: #f56c6c;      /* 主色调 */
+  --vp-c-brand-2: #c45656;      /* 暗色下的悬浮（通常需要深一点以保证对比度） */
+  --vp-c-brand-3: #f89898;      /* 暗色下的点击 */
+  --vp-c-brand-next: #fab6b6; 
+}
+
+/* 3. 调整正文内容的最大宽度 */
+.VPDoc .content-container {
+  max-width: 900px !important;   /* 推荐 860~920 */
+  margin: 0 auto !important;     /* 居中 */
+}
+
+/* 方案二：让右侧大纲的长标题自然换行，不再显示省略号 */
+.VPDocAsideOutline .outline-link {
+  white-space: normal !important;
+  line-height: 1.5 !important;
+  margin-bottom: 8px !important; /* 增加一点段落间距，显得不那么拥挤 */
+}
